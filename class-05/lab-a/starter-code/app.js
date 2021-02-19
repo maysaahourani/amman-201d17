@@ -39,7 +39,7 @@ function multiply(a, b) { //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
- //testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize 
 //the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -165,20 +165,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-    let resultOfMultiplication = 1;
-    let message = `The numbers `;
-    for (let index = 0; index < dynamicArray.length; index++) {
-        resultOfMultiplication = multiply(resultOfMultiplication, dynamicArray[index])[0];
-        index == dynamicArray.length - 1
-        ? (message += `${dynamicArray[index]}`)
-        : (message += `${dynamicArray[index]},`);
-    }
-    message += ` have a product of ${resultOfMultiplication}.`;
-
-    return [resultOfMultiplication, message];
+    let arrR = [1];
+    for (let i=0;i <dynamicArray.length ;i++ ){
+    arrR = multiply(arrR[0],dynamicArray[i]);
+}
+let statement = `The numbers ${dynamicArray} have a product of ${arrR[0]}.`;
+return[arrR[0],statement];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+ testMultiplyAnyArray(testDynamicArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your 
+//laptop. You're done! Submit the link to the repo following the instructions in Canvas.
